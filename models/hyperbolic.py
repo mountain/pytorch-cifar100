@@ -11,7 +11,7 @@ class Flow(nn.Module):
     def __init__(self):
         super(Flow, self).__init__()
 
-    def flow(self, x, theta):
+    def forward(self, x, theta):
         cs = th.cos(theta * np.pi * 2)
         ss = th.sin(theta * np.pi * 2)
         return (1 + ss) * x + cs
