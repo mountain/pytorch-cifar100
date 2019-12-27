@@ -125,17 +125,32 @@ def get_network(args, use_gpu=True):
         from models.senet import seresnet18
         net = seresnet18()
     elif args.net == 'seresnet34':
-        from models.senet import seresnet34 
+        from models.senet import seresnet34
         net = seresnet34()
     elif args.net == 'seresnet50':
-        from models.senet import seresnet50 
+        from models.senet import seresnet50
         net = seresnet50()
     elif args.net == 'seresnet101':
-        from models.senet import seresnet101 
+        from models.senet import seresnet101
         net = seresnet101()
     elif args.net == 'seresnet152':
         from models.senet import seresnet152
         net = seresnet152()
+    elif args.net == 'hresnet18':
+        from models.hyperbolic import hresnet18
+        net = hresnet18()
+    elif args.net == 'hresnet34':
+        from models.hyperbolic import hresnet34
+        net = hresnet34()
+    elif args.net == 'hresnet50':
+        from models.hyperbolic import hresnet50
+        net = hresnet50()
+    elif args.net == 'hresnet101':
+        from models.hyperbolic import hresnet101
+        net = hresnet101()
+    elif args.net == 'hresnet152':
+        from models.hyperbolic import hresnet152
+        net = hresnet152()
 
     else:
         print('the network name you have entered is not supported yet')
